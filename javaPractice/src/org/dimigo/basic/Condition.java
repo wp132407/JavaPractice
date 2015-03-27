@@ -3,44 +3,61 @@ package org.dimigo.basic;
 public class Condition {
 
 	public static void main(String[] args) {
-		int distance =50;
-		String car = "고속버스";
-		int tax = 0;
-		
-		switch (car) {
-		case "고속버스" :
-			if(distance <=10){
-				tax = 850;
-			}
-			else if(distance <=20){
-				tax = 1150;
-			}
-			else if(distance <=30){
-				tax = 1450;
-			}
-			else {
-				tax = 850 + ((distance-10)/10) * 300;
-			}
-			break;
-		case "경차" :
-			if(distance <=10){
-				tax = 300;
-			}
-			else if(distance <=20){
-				tax = 500;
-			}
-			else{
-				tax = 700;
-			}
-			break;
-		}
-			
-			System.out.println("<< 고속도로 통행료 계산 >>");
-			System.out.println("거리 :" + distance + "km");
-			System.out.println("차량 :" + car);
-			System.out.println("통행료 :" + tax + "원");
-		
-		}
-
+		int distance=10;
+	      String carType="고속버스";
+	      int pay;
+	      
+	      System.out.println("<<고속도로 통행료 계산>>");
+	      
+	      switch(carType){
+	      case "고속버스":
+	         System.out.println("거리: "+ distance+"km");
+	         System.out.println("차종: 고속버스");
+	         pay=850;
+	         {
+	            if(distance<=10)
+	               System.out.println("통행료: "+pay+"원");
+	            else if(distance<=20)
+	               System.out.println("통행료: "+(pay+300)+"원");
+	            else if(distance<=30)
+	               System.out.println("통행료: "+(pay+600)+"원");
+	            else 
+	               System.out.println("?");
+	         }
+	         break;
+	      
+	      case "경차":
+	         System.out.println("거리: "+distance+"km");
+	         System.out.println("차종: 경차");
+	         pay=300;
+	         {
+	            if(distance<=10)
+	               System.out.println("통행료: "+pay+"원");
+	            else if(distance<=20)
+	               System.out.println("통행료: "+(pay+200)+"원");
+	            else if(distance<=30)
+	               System.out.println("통행료: "+(pay+400)+"원");
+	            else 
+	               System.out.println("?");
+	         }
+	         break;
+	         
+	      default:
+	         System.out.println("거리: "+distance+"km");
+	         System.out.println("차종: 그 외");
+	         pay=600;
+	         {
+	            if(distance<=10)
+	               System.out.println("통행료: "+pay+"원");
+	            else if(distance<=20)
+	               System.out.println("통행료: "+(pay+200)+"원");
+	            else if(distance<=30)
+	               System.out.println("통행료: "+(pay+400)+"원");
+	            else 
+	               System.out.println("?");
+	         }
+	      }
 	}
+}
+
 
