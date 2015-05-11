@@ -29,7 +29,7 @@ public class Question {
 		
 		System.out.println("가장 좋아하는 가수는?");
 		String answer = scanner.nextLine();
-		if("박효신".equals(answer)) {
+		if(singer.equals(answer)) {
 			System.out.println("정답입니다!!^^");
 		} else {
 			System.out.println("틀렸습니다!!ㅜㅜ");
@@ -37,7 +37,7 @@ public class Question {
 		
 		System.out.println("가장 좋아하는 배우는?");
 		String answer2 = scanner.nextLine();
-		if("김수현".equals(answer2)) {
+		if(actor.equals(answer2)) {
 			System.out.println("정답입니다!!^^");
 		} else {
 			System.out.println("틀렸습니다!!ㅜㅜ");
@@ -45,7 +45,7 @@ public class Question {
 		
 		System.out.println("가장 좋아하는 모델은?");
 		String answer3 = scanner.nextLine();
-		if("남주혁".equals(answer3)) {
+		if(model.equals(answer3)) {
 			System.out.println("정답입니다!!^^");
 		} else {
 			System.out.println("틀렸습니다!!ㅜㅜ");
