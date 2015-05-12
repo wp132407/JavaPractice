@@ -3,6 +3,7 @@
  */
 package org.dimigo.oop;
 
+import java.io.PrintStream;
 import java.util.Scanner;
 
 /**
@@ -43,10 +44,12 @@ public class Score {
 		  .append("수학점수 : ")
 		  .append(mat + "점\n")
 		  .append("영어점수 : ")
-		  .append(eng + "점\n");
+		  .append(eng + "점\n")
+		  .append("평균 : ").append(String.format("%.1f", (kor+eng+mat)/3.0) + "점\n").toString();
 		
 		System.out.println(sb);
 
 	}
+
 
 }
